@@ -10,7 +10,7 @@ public class Loot{
 		type = t;
 		switch(t){
 			case 0:// Mine
-				break;
+				break; 
 			case 1:// Oxygen
 				value = 20;
 				break;
@@ -37,7 +37,7 @@ public class LootPrograms : MonoBehaviour {
 		
 	}
 	void ManageGameObjects(){
-		
+        
 	}
 
 }

@@ -15,8 +15,7 @@ public class gameRun : MonoBehaviour {
 	void Start () {
 		gameRunnig=true;
 		oxygen = 1000;
-		GameObject loot= GameObject.CreatePrimitive(PrimitiveType.Quad);
-		
+        
 	}
 	
 	// Update is called once per frame
