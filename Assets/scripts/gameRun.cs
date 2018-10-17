@@ -12,10 +12,9 @@ public class gameRun : MonoBehaviour {
     public bool gameRunnig=false;
 	public Time time;
 
-	void Start () {
+	void Start (){
 		gameRunnig=true;
 		oxygen = 1000;
-        
 	}
 	
 	// Update is called once per frame

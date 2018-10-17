@@ -5,20 +5,34 @@ using UnityEngine;
 public class AnimatedTexture : MonoBehaviour {
     
 	public Vector2 speed=Vector2.zero;
+
+	private static bool goingUp=false;
 	private Vector2 offset=Vector2.zero;
 	private Material material;
 	// Use this for initialization
 	void Start () {
 		material =GetComponent<Renderer>().material;
 		offset=material.GetTextureOffset("_MainTex");
-
+     
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		offset += speed*Time.deltaTime;
-		material.SetTextureOffset("_MainTex",offset);
+		print(goingUp.ToString());
+        if(goingUp){
+			offset-=speed*Time.deltaTime;
+             material.SetTextureOffset("_MainTex",offset);
+			
+		}
+		else{
+           offset += speed*Time.deltaTime;
+		   material.SetTextureOffset("_MainTex",offset);
 		
+		}
+	}
+    
+	public void putGoingUpTrue(){
+		goingUp=true;
 	}
 }

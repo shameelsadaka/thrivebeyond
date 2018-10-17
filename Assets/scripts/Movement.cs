@@ -7,14 +7,13 @@ public class Movement : MonoBehaviour {
 	public float moveSpeed = 300;
 	public GameObject character;
 
-	private Rigidbody2D characterBody;
 	private float ScreenWidth;
 
 
 	// Use this for initialization
 	void Start () {
 		ScreenWidth = Screen.width;
-		characterBody = character.GetComponent<Rigidbody2D>();
+		
 	}
 	
 	// Update is called once per frame
