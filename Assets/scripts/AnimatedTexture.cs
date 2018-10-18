@@ -35,4 +35,11 @@ public class AnimatedTexture : MonoBehaviour {
 	public void putGoingUpTrue(){
 		goingUp=true;
 	}
+	public void putGoingUpFalse(){
+		goingUp=false;
+			}
+
+	public bool getGoingUp(){
+             return goingUp;
+	}
 }
