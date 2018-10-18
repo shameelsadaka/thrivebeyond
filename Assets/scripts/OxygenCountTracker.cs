@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class gameRun : MonoBehaviour {
-   public GameObject diverPrefab;
-   public GameObject diver;
+using TMPro;
+public class OxygenCountTracker : MonoBehaviour {
+   
 	// Use this for initialization
 	public float oxygen;
-    public Text oxygenText;
+    public TextMeshProUGUI oxygenText;
     public bool gameRunnig=false;
 	public Time time;
 
@@ -22,11 +22,10 @@ public class gameRun : MonoBehaviour {
 		
 		oxygen = oxygen -1;
 		if(oxygen == 0){
-			gameOver();
-		}
+			FindObjectOfType<GameManager>().gameOver();
+			
+		} 
 		oxygenText.text= "OXYGEN:"+ oxygen.ToString() ;
 	}
-	void gameOver(){
-		 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
-	}
+	
 }
